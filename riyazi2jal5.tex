@@ -1,0 +1,419 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{framed}
+
+\theoremstyle{definition}
+\newtheorem{thm}{قضیه}
+\newtheorem{mesal}[thm]{مثال}
+\newtheorem{soal}[thm]{سوال}
+\newtheorem{tav}[thm]{توجه}
+\newtheorem{cor}[thm]{نتیجه}
+
+
+\newtheorem{tamrinetahvili}{تمرین تحویلی}
+\newtheorem{lem}[thm]{لم}
+
+\newtheorem{nokte}[thm]{نکته}
+\newtheorem{jambandi}{جمعبندی}
+\newtheorem{defn}[thm]{تعریف}
+
+\usepackage{xepersian}
+\settextfont{XB Niloofar}
+\setdigitfont{XB Niloofar}
+\linespread{1.5}
+\begin{document}
+\section{جلسه‌ی پنجم}
+قبلاً ثابت کرده‌ایم که تصویر بردار
+$\mathbf{a}$
+روی بردار
+$\mathbf{b}$
+برابر است با
+\[
+\|a\| \cos \theta \frac{\mathbf{b}}{\|b\|}
+\]
+همواره هنگام اثبات این فرمول شکلهائی کشیدیم که در آنها زاویه‌ی
+$\theta$
+میان بردارهای
+$\mathbf{a},\mathbf{b}$
+کمتر از ۹۰ درجه بود. توجه کنید که اگر زاویه‌ی
+یادشده از ۹۰ درجه بیشتر باشد، باز هم همان فرمول کار می‌کند و در این صورت
+$\cos \theta$
+کمتر از ۰ خواهد شد. در واقع مطابق شکل زیر
+تصویر بردار 
+$\mathbf{a}$
+روی بردار
+$\mathbf{-b}$
+برابر است با
+
+\[
+\|a\| \cos (\pi-\theta) \frac{\mathbf{-b}}{\|b\|}=\|a\| \cos \theta \frac{\mathbf{b}}{\|b\|}
+\]
+یعنی
+تصویر بردار 
+$\mathbf{a}$
+روی بردار
+$\mathbf{-b}$
+برابر است با
+تصویر بردار 
+$\mathbf{a}$
+روی بردار
+$\mathbf{b}$.
+\begin{align*}
+\includegraphics[scale=0.15]{riyazi2jal5_1.jpg}
+\end{align*}
+تا کنون با صفحه‌ها و خطها آشنا شده‌ایم. نیز برخی رویه‌ها را نیز مطالعه کرده‌ایم. هدف بعدی ما در این درس، مطالعه‌ی «منحنی‌های فضائی» است.  برای رسیدن به این هدف، نیازمند 
+ابزارهای دیگری در فضاهای برداری هستیم که در این جلسه آنها را مرور می‌کنیم.  تصویرهای زیر هر دو نمونه‌ای از منحنی‌های فضائی هستند. 
+\begin{align*}
+\includegraphics[scale=0.15]{riyazi2jal5_2.jpg}
+\end{align*}
+\begin{align*}
+\includegraphics[scale=0.15]{riyazi2jal5_3.jpg}
+\end{align*}
+
+\section*{ضرب خارجی دو بردار}
+با دو بردار می‌توان به یک صفحه رسید. مانند شکل زیر:
+\begin{align*}
+\includegraphics[scale=0.1]{riyazi2jal5_4.jpg}
+\end{align*}
+چگونه می‌توان برداری پیدا کرد که بر هر دو بردار 
+$\mathbf{a}$
+و
+$\mathbf{b}$
+عمود باشد؟
+\\
+فرض کنیم 
+$\mathbf{a}=(a_1,a_2,a_3)$
+و
+$\mathbf{b}=(b_1,b_2,b_3)$
+دو بردار باشند.
+ضرب خارجی 
+$\mathbf{a}$
+و
+$\mathbf{b}$
+که آن را با 
+$\mathbf{a} \times \mathbf{b}$
+نشان می‌دهیم، بردارِ معرفی شده در زیر است:
+\[
+\mathbf{a} \times \mathbf{b}=(a_2b_3-a_3b_2,a_3b_1-a_1b_3,a_1b_2-a_2b_1)
+\]
+به بیان دیگر
+\[
+\mathbf{a} \times \mathbf{b}=(a_2b_3-a_3b_2)\mathbf{i}+(a_3b_1-a_1b_3)\mathbf{j}+(a_1b_2-a_2b_1)\mathbf{k}
+\]
+\textbf{توجه.}
+بردار 
+$\mathbf{a} \times \mathbf{b}$
+هم بر 
+$\mathbf{a}$
+و هم بر 
+$\mathbf{b}$
+عمود است؛ یعنی
+\[
+(\mathbf{a} \times \mathbf{b})\cdot \mathbf{a} =0
+\]
+\[
+(\mathbf{a} \times \mathbf{b})\cdot \mathbf{b} =0
+\]
+جهت بردار
+$\mathbf{a} \times \mathbf{b}$
+با استفاده از قاعده‌ی دست راست تعیین می‌شود. (در کلاس توضیح داده شده است)
+\[
+\mathbf{a} \times \mathbf{b}=-\mathbf{a} \times \mathbf{b}
+\]
+برای به خاطر سپردن فرمولِ ضرب خارجی دو بردار، از دترمینانِ یک ماتریس فرضی به صورت زیر استفاده می‌کنیم. 
+\[
+\mathbf{a}=(a_1,a_2,a_3)
+\]
+\[
+\mathbf{b}=(b_1,b_2,b_3)
+\]
+\[
+A=\left(\begin{array}{ccc}
+\mathbf{i} & \mathbf{j} & \mathbf{k} \\
+a_1 & a_2 & a_3 \\
+b_1 & b_2 & b_3 
+\end{array}
+\right)
+\]
+\begin{align*}
+&
+\mathbf{a} \times \mathbf{b}=\det (A)=
+\\
+& (a_2b_3-a_3b_2)\mathbf{i}-(a_1b_3-a_3b_1)\mathbf{j}+(a_1b_2-a_2b_1)\mathbf{k}
+\end{align*}
+\begin{thm}
+\begin{enumerate}\hfill
+\item
+$\mathbf{a} \times \mathbf{b}$
+هم بر 
+$\mathbf{a}$
+و هم بر 
+$\mathbf{b}$
+عمود است.
+\item
+ضرب خارجی هر بردار در خودش صفر است.
+\[
+\mathbf{a} \times \mathbf{a}=0
+\]
+\[
+ (\mathbf{a} \times \mathbf{a})=(a_2a_3-a_3a_2)\mathbf{i}-(a_1a_3-a_3a_1)\mathbf{j}+(a_1a_2-a_2a_1)\mathbf{k}=0
+\]
+\end{enumerate}
+\end{thm}
+\begin{align*}
+قبلاً ضرب داخلی را تعبیر هندسی کرده‌ بودیم:
+\includegraphics[scale=0.15]{riyazi2jal5_5.jpg}
+\end{align*}
+\[
+\mathbf{a} \cdot \mathbf{b}=\|a\| \|b\| \cos \theta
+\]
+\begin{thm}
+اگر 
+$\mathbf{a}$
+و
+$\mathbf{b}$
+دو بردار و 
+$\theta$
+زاویه‌ی بین آن دو باشد، آنگاه 
+\[
+\|\mathbf{a} \times \mathbf{b} \|=\|\mathbf{a}\| \|\mathbf{b}\| \sin \theta
+\]
+\begin{align*}
+\includegraphics[scale=0.15]{riyazi2jal5_6.jpg}
+\end{align*}
+بنابراین اندازه‌ی ضرب خارجی 
+$\mathbf{a}$
+و
+$\mathbf{b}$
+برابر است با مساخت متوازی‌الاضلاع ساخته شده توسط
+$\mathbf{a}$
+و
+$\mathbf{b}$.
+\[
+\|\mathbf{a} \times \mathbf{b} \|^2=\|\mathbf{a}\|^2 \|\mathbf{b}\|^2 \overbrace{\sin^2 \theta}^{1-\cos^2 \theta}
+\]
+اثبات به عهده‌ی دانشجو است.
+\end{thm}
+\begin{cor}
+دو بردار 
+$\mathbf{a}$
+و
+$\mathbf{b}$
+با هم موازیند اگر و تنها اگر
+\[
+\mathbf{a} \times \mathbf{b}=\overrightarrow{0}
+\]
+\end{cor}
+زیرا دو بردار در صورتی موازیند که زاویه‌ی بین آنها یا صفر باشد یا 
+$\pi$
+و در هر دو صورت
+$\sin \theta$
+صفر است.
+\begin{mesal}
+معادله‌ی صفحه‌ای را بیابید که شامل نقاط زیر است.
+\begin{align*}
+\includegraphics[scale=0.15]{riyazi2jal5_7.jpg}
+\end{align*}
+\end{mesal}
+\begin{proof}[پاسخ]
+برای پیدا کردن معادله‌ی صفحه نیازمند دانستن بردار عمود بر آن و نقطه‌ای روی آن صفحه هستیم.
+\[
+\mathbf{PQ} = (-3,1,-7)
+\]
+\[
+\mathbf{PR} = (0,-5,-5)
+\]
+می‌دانیم که بردار 
+$\mathbf{PQ} \times \mathbf{PR}$
+برداری است عمود بر صفحه‌ی مورد نظر ما.
+در نتیجه بردار نرمال صفحه برابر است با
+\[
+\mathbf{PQ} \times \mathbf{PR}=\left|\begin{array}{ccc}
+\mathbf{i} & \mathbf{j} & \mathbf{k} \\
+-3 & 1 & -7 \\
+0 & -5 & -5
+\end{array}
+\right|
+=(-5-35)\mathbf{i}+(-15)\mathbf{j}+(15)\mathbf{k}=(-40,-15,15)
+\]
+یادآوری می‌کنیم که
+معادله‌ی صفحه‌ای که بردار عمودش 
+$(a,b,c)$
+است و از نقطه‌ی 
+$(x_0,y_0,z_0)$
+می‌گذرد به صورت زیر است:
+\[
+ax+by+cz=ax_0+by_0+cz_0
+\]
+در تنیجه با توجه به بردار نرمال بدست آمده داریم:
+\[
+-40x-15y+15y=-40 \times 1-15 \times 4+15 \times 6=10
+\]
+\end{proof}
+\begin{mesal}
+مساحت مثلث با رئوس زیر را حساب کنید.
+\[
+P=(1,4,6) , Q=(-2,5,-1), R=(1,-1,1)
+\]
+\begin{align*}
+\includegraphics[scale=0.15]{riyazi2jal5_8.jpg}
+\end{align*}
+\end{mesal}
+\begin{proof}[پاسخ]
+قاعده برابر است با اندازه‌ی خط
+$PR$
+و ارتفاع برابر است با 
+$\|PQ\| \sin \theta$
+\\
+بنابراین مساحت مثلث برابر است با
+\[\frac{\|PR\| \|PQ\| \sin \theta}{2}=\frac{\|\mathbf{PR} \times \mathbf{PQ}\|}{2}\]
+\end{proof}
+\begin{tav}
+\[
+\mathbf{j}\times \mathbf{k}=\mathbf{i}
+\]
+\[
+\mathbf{k}\times \mathbf{i}=\mathbf{j}
+\]
+\[
+\mathbf{i}\times \mathbf{j}=\mathbf{k}
+\]
+\begin{align*}
+\includegraphics[scale=0.15]{riyazi2jal5_9.jpg}
+\end{align*}
+\end{tav}
+\section*{ویژگی‌های ضرب خارجی}
+توجه کنید که در رابطه‌های زیر از آنجا که
+$\mathbf{a}\times \mathbf{b}\neq \mathbf{b}\times\mathbf{a}$
+باید به ترتیب بردارها دقت داشته باشیم.
+\begin{enumerate}
+\item
+\[
+\mathbf{a}\times \mathbf{b}=-\mathbf{b}\times \mathbf{a}
+\]
+\item
+\[
+\mathbf{a}\times (\mathbf{b}+\mathbf{c})=\mathbf{a}\times \mathbf{b}+\mathbf{a}\times \mathbf{c}
+\]
+\[
+(\mathbf{b}+\mathbf{c}) \times \mathbf{a}=\mathbf{b}\times \mathbf{a}+\mathbf{c}\times \mathbf{a}
+\]
+\item
+\[
+\mathbf{a}\cdot (\mathbf{b} \times \mathbf{c})=(\mathbf{a}\times \mathbf{b}) \cdot \mathbf{c}
+\]
+\end{enumerate}
+\begin{tav}
+روش محاسبه‌ی
+$\mathbf{a}\cdot (\mathbf{b} \times \mathbf{c})$
+به صورت زیر است:
+فرض کنید 
+$\mathbf{a}=(a_1,a_2,a_3)$
+،
+$\mathbf{b}=(b_1,b_2,b_3)$
+و
+$\mathbf{c}=(c_1,c_2,c_3)$
+داریم:
+\[
+\mathbf{a} \cdot (\mathbf{b} \times \mathbf{c})=\left|\begin{array}{ccc}
+a_1 & a_2 & a_3 \\
+b_1 & b_2 & b_3 \\
+c_1 & c_2 & c_3
+\end{array}
+\right|
+\]
+\end{tav}
+\section*{تعبیر هندسی $\mathbf{c} \cdot (\mathbf{a} \times \mathbf{b})$}
+حجم متوازی‌السطوح برابر است با مساحت قاعده در ارتفاع آن.
+\begin{align*}
+\includegraphics[scale=0.15]{riyazi2jal5_10.jpg}
+\end{align*}
+مطابق شکل بالا مساحت قاعده برابر است با
+$\|\mathbf{a} \times \mathbf{b}\|$.
+\\
+برای محاسبه‌ی ارتفاع کافی است اندازه‌ی تصویر بردارِ 
+$\mathbf{c}$
+را روی یک بردار عمود بر 
+$\mathbf{a}$
+و 
+$\mathbf{b}$
+محاسبه کنیم.
+بردار 
+$\mathbf{a} \times \mathbf{b}$
+بر 
+$\mathbf{a}$
+و 
+$\mathbf{b}$
+عمود است.
+پس کافی است تصویر بردار
+$\mathbf{c}$
+را روی 
+$\mathbf{a} \times \mathbf{b}$
+پیدا کنیم:
+\[
+(\|\mathbf{c} \| |\cos \theta|)
+\]
+پس حجم متوازی‌السطوح یادشده برابر است با:
+\[
+(\|\mathbf{c} \| |\cos \theta|) (\|\mathbf{a} \times \mathbf{b}\|) \quad (*)
+\]
+داریم
+\[
+\cos \theta= \frac{\mathbf{c}.(\mathbf{a}\times\mathbf{b})}{\|\mathbf{c}\|\|\mathbf{a}\times\mathbf{b})\|}
+\]
+با قرار دادن عبارت بالا در رابطه‌ی
+$*$
+می‌بینیم که 
+حجم متوازی‌السطوح برابر است با
+\[|\mathbf{c}.(\mathbf{a}\times \mathbf{b})|\]
+\begin{cor}
+حجم متوازی‌السطوح ساخته شده توسط بردارهای 
+$\mathbf{a}$
+،
+$\mathbf{b}$
+و
+$\mathbf{c}$
+برابر است با
+\[
+|\mathbf{c}\cdot (\mathbf{a} \times \mathbf{b})|
+\]
+\end{cor}
+\begin{mesal}
+نشان دهید که بردارهای 
+$\mathbf{a}=(1,4,-7)$
+،
+$\mathbf{b}=(2,-1,4)$
+و
+$\mathbf{a}=(0,-9,18)$
+در یک صفحه هستند.
+\end{mesal}
+\begin{proof}[پاسخ]
+کافیست نشان دهیم 
+\[
+\mathbf{a}\cdot (\mathbf{b} \times \mathbf{c})=0
+\]
+در واقع اگر این بردارها در یک صفحه نباشند یک متوازی السطوح می‌سازند که حجم آن ناصفر است. محاسبه‌ی عبارت بالا را به عهده‌ی دانشجو می‌گذاریم. 
+\end{proof}
+\begin{tamrinetahvili}
+\hfill
+\begin{enumerate}
+\item
+معادله‌ی خطی را بیابید که از نقاط 
+$(4,-1,2)$
+و
+$(1,1,5)$
+می‌گذرد.
+\item
+معادله‌ی صفحه‌ای را بنویسید که شامل نقاط 
+$(3,-1,1)$
+،
+$(4,0,2)$
+و
+$(6,3,1)$
+است.
+\end{enumerate}
+\end{tamrinetahvili}
+\end{document}
